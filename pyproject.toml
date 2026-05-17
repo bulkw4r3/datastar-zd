@@ -1,0 +1,18 @@
+[project]
+name = "datastar-zd"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "datastar-py>=1.0.0",
+    "fastapi[all]>=0.136.1",
+    "python-dotenv>=1.2.2",
+    "python-multipart>=0.0.28",
+    "pyturso>=0.5.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.13",
+]
