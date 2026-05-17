@@ -1,7 +1,7 @@
 [project]
 name = "datastar-zd"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0"
+description = "simple website using datastar-py"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
@@ -14,4 +14,5 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ruff>=0.15.13",
+    "ty>=0.0.37",
 ]
