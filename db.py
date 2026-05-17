@@ -1,15 +1,10 @@
-import os
+import sqlite3
 
-import turso
-
-DATABASE_URL = os.getenv("DATABASE_URL", "numbers.db")
-DATABASE_AUTH_TOKEN = os.getenv("DATABASE_AUTH_TOKEN")
+LOCAL_DB_PATH = "datastar.db"
 
 
 def get_connection():
-    if DATABASE_AUTH_TOKEN:
-        return turso.connect(DATABASE_URL, auth_token=DATABASE_AUTH_TOKEN)
-    return turso.connect(DATABASE_URL)
+    return sqlite3.connect(LOCAL_DB_PATH)
 
 
 def init_db():
@@ -19,7 +14,7 @@ def init_db():
         CREATE TABLE IF NOT EXISTS numbers (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             seven_digit INTEGER NOT NULL,
-            long_digit TEXT NOT NULL,
+            long_digit INTEGER NOT NULL,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )
         """
@@ -28,7 +23,7 @@ def init_db():
     conn.close()
 
 
-def store_numbers(seven_digit: int, long_digit: str):
+def store_numbers(seven_digit: int, long_digit: int):
     conn = get_connection()
     conn.execute(
         "INSERT INTO numbers (seven_digit, long_digit) VALUES (?, ?)",
