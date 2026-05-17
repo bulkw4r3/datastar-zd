@@ -6,7 +6,7 @@ A simple website built with **Datastar** (frontend), **FastAPI** (backend), and 
 
 - Stores two numbers:
   1. A **7-digit number**
-  2. A **10-14 digit number**
+  2. A **10-20 digit number**
 - Real-time DOM updates via Datastar SSE
 - Validation on both client and server side
 - Turso/libSQL database for persistent storage
