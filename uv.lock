@@ -80,7 +80,6 @@ dependencies = [
     { name = "fastapi", extra = ["all"] },
     { name = "python-dotenv" },
     { name = "python-multipart" },
-    { name = "pyturso" },
 ]
 
 [package.dev-dependencies]
@@ -94,7 +93,6 @@ requires-dist = [
     { name = "fastapi", extras = ["all"], specifier = ">=0.136.1" },
     { name = "python-dotenv", specifier = ">=1.2.2" },
     { name = "python-multipart", specifier = ">=0.0.28" },
-    { name = "pyturso", specifier = ">=0.5.1" },
 ]
 
 [package.metadata.requires-dev]
@@ -472,24 +470,11 @@ wheels = [
 
 [[package]]
 name = "python-multipart"
-version = "0.0.28"
+version = "0.0.29"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/82/54/a85eb421fbdd5007bc5af39d0f4ed9fa609e0fedbfdc2adcf0b34526870e/python_multipart-0.0.28.tar.gz", hash = "sha256:8550da197eac0f7ab748961fc9509b999fa2662ea25cef857f05249f6893c0f8", size = 45314, upload-time = "2026-05-10T11:05:16.596Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4e/fe/70bd71a6738b09a0bdf6480ca6436b167469ca4578b2a0efbe390b4b0e70/python_multipart-0.0.29.tar.gz", hash = "sha256:643e93849196645e2dbdd81a0f8829a23123ad7f797a84a364c6fb3563f18904", size = 45678, upload-time = "2026-05-17T17:29:47.654Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f3/a2/43bbc5860b5034e2af4ef99a0e04d726ff329c43e192ef3abaa8d7ecfce5/python_multipart-0.0.28-py3-none-any.whl", hash = "sha256:10faac07eb966c3f48dc415f9dee46c04cb10d58d30a35677db8027c825ed9b6", size = 29438, upload-time = "2026-05-10T11:05:15.052Z" },
-]
-
-[[package]]
-name = "pyturso"
-version = "0.5.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "typing-extensions" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/41/89/0b25d31d9b4babd68b9f3b2010eab553769fed81df0fad28d6646a13f147/pyturso-0.5.1.tar.gz", hash = "sha256:418c186393cbb4fad30baaa4d6be18fe03369cf4691a4f42fb459758c92cb5fe", size = 1938764, upload-time = "2026-03-10T12:40:39.996Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/55/c2/5f61ace6ebec4d023983ea797e032820797ed27ad565b824f40213a19c6b/pyturso-0.5.1-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:2e10b4d4b47a2db2cf47c4cbf0345bbc5a99b7ec5528101d2fca5fd03f11e878", size = 4534591, upload-time = "2026-03-10T12:40:26.341Z" },
-    { url = "https://files.pythonhosted.org/packages/58/cb/aa78241f51e11d3bda76b8e2551ef18226b2c8f5fc359766a4856c832298/pyturso-0.5.1-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ef8822aca1a10fb60d5c161669e55e1347730d99a8943cc7db2fd1028900805a", size = 15155567, upload-time = "2026-03-10T12:40:29.846Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/cb/769cfc37177252872a45a71f3fbdde9d51b471a3f3c14bfe95dde3407386/python_multipart-0.0.29-py3-none-any.whl", hash = "sha256:2ddcc971cef266225f54f552d8fa10bcfbb1f14446caec199060daac59ff2d69", size = 29640, upload-time = "2026-05-17T17:29:45.69Z" },
 ]
 
 [[package]]
