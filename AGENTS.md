@@ -18,7 +18,7 @@ uv run python main.py   # starts on http://localhost:8000
 - **Frontend**: Datastar v1.0.0-beta.11 loaded from CDN. Pure HTML + `data-*` attributes; zero custom JS.
 - **Communication**: Backend pushes DOM updates via SSE using `datastar_py`. Endpoints that mutate UI return `DatastarResponse` with `ServerSentEventGenerator.patch_elements(...)`.
 - **Form submissions**: Datastar handles these, not standard HTML forms. The form uses `data-on:submit="@post('/api/numbers', {contentType: 'form'})"`. Do not add `action` or `method` to the `<form>`.
-- **Database**: Turso/libSQL via `pyturso` (PyPI name) which imports as `turso`. Defaults to local SQLite (`numbers.db`). Switches to Turso cloud only when `DATABASE_AUTH_TOKEN` env var is present (`DATABASE_URL` also required then).
+- **Database**: Local SQLite (`datastar.db`) via the standard library `sqlite3` module.
 - **DB init**: `init_db()` runs automatically inside the FastAPI `lifespan` on every startup — no separate migration command.
 
 ## Validation
