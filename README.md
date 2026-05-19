@@ -30,12 +30,28 @@ uv run python main.py
 
 The app will be available at [http://localhost:8000](http://localhost:8000).
 
+## Running with Docker
+
+Build and run the application in a Docker container:
+
+```bash
+# Build the image
+docker build -t datastar-zd .
+
+# Run the container
+docker run -p 8000:8000 datastar-zd
+```
+
+The app will be available at [http://localhost:8000](http://localhost:8000).
+
 ## Project Structure
 
 ```
 .
 ├── main.py              # FastAPI application
 ├── db.py                # Database setup and queries (SQLite)
+├── Dockerfile           # Docker build configuration
+├── .dockerignore        # Docker ignore rules
 ├── static/
 │   └── datastar.js      # Local Datastar bundle
 ├── templates/
