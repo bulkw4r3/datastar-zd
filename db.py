@@ -4,7 +4,9 @@ LOCAL_DB_PATH = "datastar.db"
 
 
 def get_connection():
-    return sqlite3.connect(LOCAL_DB_PATH)
+    conn = sqlite3.connect(LOCAL_DB_PATH)
+    conn.execute("PRAGMA journal_mode=WAL")
+    return conn
 
 
 def init_db():
